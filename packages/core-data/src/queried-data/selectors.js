@@ -54,7 +54,7 @@ function getQueriedItemsUncached( state, query ) {
 
 /**
  * Returns items for a given query, or null if the items are not known. Caches
- * result by both per state (by reference) and per query (by deep equality).
+ * result both per state (by reference) and per query (by deep equality).
  * The caching approach is intended to be durable to query objects which are
  * deeply but not referentially equal, since otherwise:
  *

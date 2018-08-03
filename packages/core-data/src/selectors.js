@@ -146,10 +146,10 @@ export function getEntityRecord( state, kind, name, key ) {
 /**
  * Returns the Entity's records.
  *
- * @param {Object} state  State tree
- * @param {string} kind   Entity kind.
- * @param {string} name   Entity name.
- * @param {?Object} query    Optional terms query.
+ * @param {Object}  state  State tree
+ * @param {string}  kind   Entity kind.
+ * @param {string}  name   Entity name.
+ * @param {?Object} query  Optional terms query.
  *
  * @return {Array} Records.
  */

@@ -21,12 +21,12 @@ export function receiveItems( items ) {
  * Returns an action object used in signalling that queried data has been
  * received.
  *
- * @param {?Object} query Optional query object.
  * @param {Array}   items Queried items received.
+ * @param {?Object} query Optional query object.
  *
  * @return {Object} Action object.
  */
-export function receiveQueriedItems( query = {}, items ) {
+export function receiveQueriedItems( items, query = {} ) {
 	return {
 		...receiveItems( items ),
 		query,

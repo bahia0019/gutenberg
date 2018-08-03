@@ -61,13 +61,13 @@ export function addEntities( entities ) {
  * @param {string}       kind    Kind of the received entity.
  * @param {string}       name    Name of the received entity.
  * @param {Array|Object} records Records received.
- * @param {Object?}      query  Query Object.
+ * @param {?Object}      query  Query Object.
  *
  * @return {Object} Action object.
  */
 export function receiveEntityRecords( kind, name, records, query ) {
 	return {
-		...receiveQueriedItems( query, records ),
+		...receiveQueriedItems( records, query ),
 		kind,
 		name,
 	};
