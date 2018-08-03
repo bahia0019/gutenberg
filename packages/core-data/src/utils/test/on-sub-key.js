@@ -1,4 +1,9 @@
 /**
+ * External dependencies
+ */
+import deepFreeze from 'deep-freeze';
+
+/**
  * Internal dependencies
  */
 import onSubKey from '../on-sub-key';
@@ -17,7 +22,7 @@ describe( 'onSubKey', () => {
 	} );
 
 	it( 'should ignore actions where property not present', () => {
-		const state = {};
+		const state = deepFreeze( {} );
 		const reducer = createEnhancedReducer( 'caller' );
 		const nextState = reducer( state, { type: 'DO_FOO' } );
 
@@ -27,7 +32,7 @@ describe( 'onSubKey', () => {
 	it( 'should key by action property', () => {
 		const reducer = createEnhancedReducer( 'caller' );
 
-		let state = Object.freeze( {} );
+		let state = deepFreeze( {} );
 		state = reducer( state, { type: 'DO_FOO', caller: 1 } );
 		state = reducer( state, { type: 'DO_FOO', caller: 2 } );
 
